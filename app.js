@@ -1,7 +1,8 @@
 const validator = require('validator');
 
-
-const emails = ['cat', 'twitter.com','tomorrow@gmail.com','14752','nodejs@dream.fr' ];
+// process.argv
+console.log(process.argv);
+const emails = process.argv[2];
 
 for (let i = 0; i < emails.length; i++){
     const resultat = validator.isEmail(emails[i])?"ok": 'no';

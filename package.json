@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev":"node console.js",
+    "start": " cross-env NODE_ENV=production cross-env APP_PORT=3000 node config.js",
+    "dev": "node console.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +14,8 @@
   "dependencies": {
     "validator": "^13.5.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0"
+  }
 }
